@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR5887625_1	/home/abi/projects/rna-seq-pipeline-for-transcriptomics/results/fastqc/SRR5887625_1_fastqc.zip
+FastQC	all_sections	SRR5887625_2	/home/abi/projects/rna-seq-pipeline-for-transcriptomics/results/fastqc/SRR5887625_2_fastqc.zip
