@@ -1,22 +1,38 @@
-# rna-seq-pipeline-for-transcriptomics
+# RNA-Seq Pipeline for Transcriptomics
+
 ## Overview
-This repository contains a reproducible RNA-Seq analysis workflow developed as part of my bioinformatics learning and research.
+
+This repository contains a reproducible RNA-Seq analysis workflow developed for transcriptomics research using open-source bioinformatics tools.
 
 ## Objectives
-- Perform quality control
-- Trim sequencing reads
+
+- Perform quality control of RNA-Seq reads
+- Trim low-quality sequences
 - Align reads to a reference genome
 - Quantify gene expression
 - Identify differentially expressed genes
 - Perform functional enrichment analysis
+- Generate publication-quality visualizations
 
-## Planned Workflow
-SRA → FastQC → Trimming → Alignment → Quantification → DESeq2 → GO/KEGG → Visualization
+## Workflow
+
+```text
+SRA
+│
+├── FastQC
+├── MultiQC
+├── Fastp
+├── HISAT2
+├── featureCounts
+├── DESeq2
+├── GO / KEGG Enrichment
+└── Visualization
+```
 
 ## Repository Structure
 
 ```
-rnaseq-pipeline/
+rnaseq-pipeline-for-transcriptomics/
 ├── data/
 ├── scripts/
 ├── results/
@@ -27,5 +43,18 @@ rnaseq-pipeline/
 └── README.md
 ```
 
+## Tools
+
+- FastQC
+- MultiQC
+- Fastp
+- HISAT2
+- SAMtools
+- featureCounts
+- DESeq2
+- R
+- Python
+
 ## Status
-🚧 Under development.
+
+🚧 Under development. This repository will be updated as the pipeline is completed.
