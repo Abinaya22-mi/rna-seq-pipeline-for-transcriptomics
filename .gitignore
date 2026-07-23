@@ -1,29 +1,25 @@
-# Python
-__pycache__/
-*.pyc
-
-# R
-.Rhistory
-.RData
-
-# Conda
-.env
-.conda
-
-# Jupyter
-.ipynb_checkpoints/
-
-# macOS
-.DS_Store
-
-# Windows
-Thumbs.db
-
-# Large sequencing files
+# Raw sequencing data
+data/
 *.fastq
 *.fastq.gz
 *.fq
 *.fq.gz
-*.bam
-*.sam
 *.sra
+*.tmp
+
+# Alignment
+*.sam
+*.bam
+*.bai
+
+# Variant indexes
+*.csi
+
+# Reference indexes
+reference/index/
+
+# Databases
+databases/
+
+# Large annotation outputs
+results/alignment/
