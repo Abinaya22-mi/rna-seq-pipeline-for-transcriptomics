@@ -1,12 +1,15 @@
 # Raw sequencing data
 data/
 *.fastq
-*.fastq.gz
 *.fq
 *.fq.gz
 *.sra
 *.tmp
-
+*.sra.tmp
+*.fastq.gz
+*.bam
+*.sam
+*.fq
 # Alignment
 *.sam
 *.bam

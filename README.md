@@ -1,60 +1,79 @@
-# RNA-Seq Pipeline for Transcriptomics
+# Bacterial Whole Genome Analysis Pipeline
 
-## Overview
+An end-to-end bacterial whole genome sequencing (WGS) bioinformatics pipeline developed using Linux (WSL), Bash, and Python.
 
-This repository contains a reproducible RNA-Seq analysis workflow developed for transcriptomics research using open-source bioinformatics tools.
+## Pipeline Overview
 
-## Objectives
+This project performs:
 
-- Perform quality control of RNA-Seq reads
-- Trim low-quality sequences
-- Align reads to a reference genome
-- Quantify gene expression
-- Identify differentially expressed genes
-- Perform functional enrichment analysis
-- Generate publication-quality visualizations
-
+- Quality Control
+- Read Trimming
+- Genome Alignment
+- Variant Calling
+- Genome Annotation
+- Functional Annotation
+- AMR Analysis
+- Virulence Analysis
+- Functional Pathway Analysis
+- Genome Visualization
 ## Workflow
 
-```text
-SRA
-│
-├── FastQC
-├── MultiQC
-├── Fastp
-├── HISAT2
-├── featureCounts
-├── DESeq2
-├── GO / KEGG Enrichment
-└── Visualization
-```
+<p align="center">
+  <img src="figures/workflow.png" width="900">
+</p>
+## Circular Genome Map
 
-## Repository Structure
+Generated using **Proksee** from the Prokka-annotated GenBank file.
 
-```
-rnaseq-pipeline-for-transcriptomics/
-├── data/
-├── scripts/
-├── results/
-├── figures/
-├── docs/
-├── notebooks/
-├── environment.yml
-└── README.md
-```
+<p align="center">
+  <img src="figures/genome_map.png" width="800">
+</p>
+## Results
 
-## Tools
+### Genome Annotation Summary
+
+<p align="center">
+  <img src="figures/genome_annotation_summary.png" width="500">
+</p>
+
+### Variant Distribution
+
+<p align="center">
+  <img src="figures/variant_distribution.png" width="450">
+</p>
+
+### Functional Gene Categories
+
+<p align="center">
+  <img src="figures/functional_gene_categories.png" width="650">
+</p>
+## Key Findings
+
+| Feature | Result |
+|---------|--------|
+| Genome Size | 5.37 Mb |
+| CDS | 4507 |
+| tRNA | 89 |
+| rRNA | 28 |
+| tmRNA | 1 |
+| Variants | 29 |
+| SNPs | 14 |
+| INDELs | 15 |
+| Cold Shock Proteins | 5 |
+| ATP Synthase Genes | 9 |
+| Transporters | 95 |
+| Membrane Proteins | 77 |
+| Hypothetical Proteins | 2015 |
+
+## Software Used
 
 - FastQC
 - MultiQC
 - Fastp
-- HISAT2
+- Bowtie2
 - SAMtools
-- featureCounts
-- DESeq2
-- R
-- Python
-
-## Status
-
-🚧 Under development. This repository will be updated as the pipeline is completed.
+- BCFtools
+- Prokka
+- DIAMOND
+- ABRicate
+- Proksee
